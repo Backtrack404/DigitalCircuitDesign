@@ -2,3 +2,29 @@
 
 Analog to Digital 
 표본화 -> 양자화 -> 부호화 
+
+Active High 기준
+
+And Gate (논리 곱)
+- 모든 입력이 high 일 때 high (스위치 직렬로)
+
+
+OR Gate (논리 합)
+-여러개 입력중 하나라도 high이면 high(스위치 병렬로)
+
+
+NOT Gate (반전)
+- Low = high , high = Low
+//Pull up, Pull down 왜하는지
+
+
+R = 전류 제어 목적 
+L = 전류의 흐름 방해 
+C = 전류를 가둬놓음 
+
+
+NAND Gate & NOR
+- 입력은 Active High 가 되게 하되 출력은 Active Low
+
+
+
