@@ -44,6 +44,55 @@ NOR + NOR + NOR = AND
 
 
 
+//D:\University\3_1\7.DigitalCircuitDesign\1주차\4.VHDL및실습_Practice_Guide_vol2_v0.2참조
+
+
+*Cyclone2 - > F(P)BGA type-> PinCount:672 -> SpeedGrade :6 -> 칩 선택(파랑) 
+-> Next -> EDA Tool -> Next -> Summary -> Finish 
+
+
+*디자인 입력
+Schemetic
+New -> DesignFile -> BlockDiagram* -> Cad Screen -> GateIcon(Symbol tool || space double click)
+-> Search AND2
+
+기능
+ctrl+마우스휠 = 확대  
+
+*입출력포트
+PinTool || SymbolTool(Search INPUT) -> INPUT_VCC 2개 -> OUTPUT -> Use 파셜라인 셀렉션 || Node Tool
+-> Drag Draw -> (double click)Change Pin Name -> Save(AND_2)
+
+*합성 
+삼각형 아이콘 옆 start* Synthesis 
+
+*결과
+Tools Menu -> Metrix -> R*Viewer
+
+*기능 시뮬레이션 
+NewFile -> debuging -> univer* program VWF -> 파형 편집창 -> 빈공간 마우스 우클릭 
+-> import * -> Node Finder -> List -> 오른쪽으로 이동 -> OK 2 
+-> 드래그 선택 -> High 선택 -> 저장 (AND_2.vwf)-> Option -> Q2 Sim -> run 
+
+
+*회로구성
+  1 2 3 4 . . . .
+A
+B
+C
+.
+.
+.
+
+Switch - A=>N25, B=>N26
+LED - Y=>AE23
+
+
+*Fitting 
+어사인먼트 메뉴 - > 핀플러그 -> Location -N25 -> Enter                                   -> 칩 플래너
+-> start complatiom -> tools Menu -> 칩 플래너 ->
+                                  -> RTS Viewer-> 마우스 우클릭 -> locate -> locate and *
 
 
 
+*타이밍 시뮬레이션
