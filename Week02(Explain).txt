@@ -67,7 +67,7 @@ PinTool || SymbolTool(Search INPUT) -> INPUT_VCC 2개 -> OUTPUT -> Use 파셜라
 삼각형 아이콘 옆 start* Synthesis 
 
 *결과
-Tools Menu -> Metrix -> R*Viewer
+Tools Menu -> Netlist-> R*Viewer
 
 *기능 시뮬레이션 
 NewFile -> debuging -> univer* program VWF -> 파형 편집창 -> 빈공간 마우스 우클릭 
@@ -89,10 +89,61 @@ LED - Y=>AE23
 
 
 *Fitting 
-어사인먼트 메뉴 - > 핀플러그 -> Location -N25 -> Enter                                   -> 칩 플래너
+어사인먼트 메뉴 - > 핀플래너 -> Location -N25 -> Enter                                   나와서 -> 프로세싱
 -> start complatiom -> tools Menu -> 칩 플래너 ->
                                   -> RTS Viewer-> 마우스 우클릭 -> locate -> locate and *
 
 
 
-*타이밍 시뮬레이션
+*타이밍 시뮬레이션(입력 -> 출력 클럭 제어)
+파일 .vwf 열기 -> run Sim -> 지연생김 -> 각 입출력 포트 위치 변경
+
+*
+tools menu -> programmer -> sof파일 -> *conf -> start 
+
+
+
+
+
+
+
+
+
+<!------------------------------------------------------------>
+newfile -> VHDL
+
+// --가 주석
+
+//데이터 흐름에대한 동작 선언 
+
+library ieee; //국제표준 라이브러리
+  use ieee.std_logic_ll64.all;
+  use ieee.std_logic_arith.all;
+  use ieee.std_logic_unsigned.all;
+
+entitiy AND_2 is //입출력 선언
+  port(
+    A : in std_logic; //포트가 A이고 입력이다
+    B : in std_logic; //포트가 B이고 입력이다
+    Y : out std_logic //포트가 Y이고 출력이다
+  );
+end AND_2;
+
+architecture dataflow of AND_2 is //동작선언
+begin
+//여기서부터 동작 선언 
+  Y <= A and B; //<=할당문 출력해라
+
+end dataflow; //dataflow 아니어도됨 위아래 같기만 하면됨
+
+//이런것도 있다
+Y <= '1' 
+  when A = '1' and B = '1'
+  else '0';
+
+
+
+
+  //파일명과 엔티티명과 같게
+
+  나머지 과정은 전부 동일
