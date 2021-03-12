@@ -24,7 +24,26 @@ C = 전류를 가둬놓음
 
 
 NAND Gate & NOR
+- AND의 반전 & OR의 반전 
 - 입력은 Active High 가 되게 하되 출력은 Active Low
+
+XOR Gate & XNOR
+- XOR 모든 입력이 같으면 Low 
+- XNOR 입력이 같으면 high
+
+
+
+
+NAND만 있으면 모든 게이트 제작 가능 (싸고 공정 간단) //방대한 데이터 저장용으로 사용
+NAND + NAND = AND
+NAND + NAND + NAND = OR
+
+NOR만 있으면 모든 게이트 제작 가능 (비싸지만 신뢰성 높음) //BIOS에 사용
+NOR + NOR = OR
+NOR + NOR + NOR = AND
+
+
+
 
 
 
